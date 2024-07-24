@@ -1,0 +1,6 @@
+node -v                           // check node.js version
+node --version
+
+REPL (Read Eval Print Loop)
+
+node <app.js>                     // run js in node.js

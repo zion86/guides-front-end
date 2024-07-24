@@ -1,0 +1,22 @@
+// http-server
+npm install http-server -D
+npx http-server [path] [options]
+
+--
+
+// converter-webfont
+npm i converter-webfont -D
+npx cwebfont ./in ./out woff,woff2
+
+--
+
+// json-server
+npm i json-server
+|- package.json
+"scripts": {
+  "server": "json-server --watch db.json --port 5000"
+}
+
+npm run server
+
+--

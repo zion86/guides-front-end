@@ -1,0 +1,120 @@
+// check version of program
+// ------------------------
+<app_name> -v || <app_name> --version
+
+// update list of programs
+// -----------------------
+sudo apt update
+
+// -----------
+// install GIT
+// -----------
+v2.24.1
+
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt-get update
+sudo apt-get install git
+
+// Check GIT version
+git --version
+
+// upgrate GIT
+sudo apt-get --only-upgrade install git
+
+
+
+// ---------------
+// install Node.js
+// ---------------
+v12.15.0
+
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+
+// install from file
+// -----------------
+rename file to setup_10.x.sh
+open terminal
+sudo bash setup_10.x.sh
+
+// upgrate Nodejs
+sudo apt-get --only-upgrade install nodejs
+
+
+
+// ---------------
+// install VS code
+// ---------------
+
+sudo apt update
+sudo apt install software-properties-common apt-transport-https wget
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo apt update
+sudo apt install code
+
+// upgrate vs code
+// ---------------
+sudo apt-get --only-upgrade install code
+
+
+
+// ---------------------
+// install google chrome
+// ---------------------
+
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+// upgrade google chrome
+// ----------------------
+sudo apt-get --only-upgrade install google-chrome-stable
+
+// upgrade firefox
+// ---------------
+sudo apt-get --only-upgrade install firefox
+
+
+// ------------
+// install Atom
+// ------------
+
+sudo add-apt-repository ppa:webupd8team/atom
+sudo apt-get update
+sudo apt-get install atom
+
+sudo apt-get --only-upgrade install atom
+
+// ----------------
+// install Telegram
+// ----------------
+
+sudo add-apt-repository ppa:atareao/telegram
+sudo apt-get update
+sudo apt-get install telegram
+
+
+
+// ----------
+// install MC
+// ----------
+
+sudo apt-get install mc
+mc
+ctrl + o => open command line interface
+
+// select skin
+Options => Appearance => modarin256
+
+
+
+// -----------------------------------
+// Install Torrent client transmission
+// -----------------------------------
+
+sudo add-apt-repository ppa:transmissionbt/ppa
+sudo apt-get update
+sudo apt-get install transmission-gtk transmission-cli transmission-common transmission-daemon
+
+sudo apt remove transmission*

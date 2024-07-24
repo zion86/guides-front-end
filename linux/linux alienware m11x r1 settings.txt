@@ -1,0 +1,89 @@
+// list of videocards
+lspci -nn | grep VGA
+
+// Change backlight
+// ----------------
+sudo setpci -s 00:02.0 f4.b=30
+
+// OR
+
+// --
+// V1
+// --
+
+// 1 Create file 20-intel.conf
+sudo touch /usr/share/X11/xorg.conf.d/20-intel.conf
+
+// 2 Edit current file
+Section "Device"
+        Identifier  	"card0"
+        Driver      	"intel"
+        Option      	"Backlight"  "intel_backlight"
+        BusID       	"PCI:0:2:0"
+EndSection
+
+
+
+// --
+// V2
+// --
+
+Section "Device"
+        Identifier 	"card0"
+        Driver      	"intel"
+        Option      	"Backlight"  "intel_backlight"
+	Option 	    	"AccelMethod" "sna"
+	Option      	"TearFree" "true"
+	Option 	    	"DRI" "3"
+        BusID       	"PCI:0:2:0"
+EndSection
+
+
+
+// --
+// V3
+// --
+
+Section "Device"
+        Identifier  	"card0"
+        BusID       	"PCI:0:2:0"
+        Driver      	"intel"
+        Option      	"Backlight"  "intel_backlight"
+	Option      	"NoAccel" "True"
+EndSection
+
+
+
+// --
+// V4
+// --
+
+Section "Device"
+        Identifier	"card0"
+        Driver      	"intel"
+	BusID       	"PCI:0:2:0"
+        Option      	"Backlight"	"intel_backlight"
+	Option      	"NoAccel" 	"True"
+	Option 		"DRI"		"false"
+EndSection
+
+
+// ----------------
+// Current settings
+// -----------------
+
+Section "Device"
+        Identifier	"card0"
+        Driver      	"intel"
+	BusID       	"PCI:0:2:0"
+        Option      	"Backlight"	"intel_backlight"
+	Option      	"AccelMethod" 	"uxa"
+	Option 		"DRI"		"false"
+EndSection
+
+
+// ------------------------------------------------------------------------------
+ls /sys/class/backlight/
+kibis@kibis-Lenovo-B570e ~ $ ls /sys/class/backlight/acpi_video0  intel_backlight
+sudo gedit /usr/share/X1/xorg.conf.d/20-intel.conf
+// ------------------------------------------------------------------------------

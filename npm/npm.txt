@@ -1,0 +1,51 @@
+npm install                                 // install all packages from package.json
+npm i
+
+npm init                                    // initialize project folder
+npm init - y
+
+npm install <package_name> -g               // install PACKAGE from node.js globally
+npm i <package_name> -g
+
+npm install <package_name>                  // local install will use in build project
+npm i <package_name>
+
+npm install <package_name>@x.x.x            // install a specific PACKAGE version
+npm i <package_name>@x.x.x
+
+npm install <package_name>~x.x.x            // install only this version of PACKAGE
+npm i <package_name>~x.x.x
+
+npm install <package_name>^x.x.x            // install this version or greater of PACKAGE
+npm i <package_name>^x.x.x
+
+npm install <package_name> --save           // project dependencies will use in build release
+npm i <package_name> -S
+
+npm install <package_name> --save-dev       // developer dependencies will use only for development
+npm i <package_name> -D
+
+npm install <package_name> --save-exact     // install a specific version of PACKAGE or greater of PACKAGE
+npm i <package_name> -E
+npm i <package_name> -E -D
+npm i <package_name> -DE                     
+
+npm uninstall <package_name>                // uninstall PACKAGE
+npm un <package_name>
+
+npm list - g--depth = 0                     // list all global packages
+npm ls
+
+--
+
+|- package.json                             // create script inside package.json
+
+"scripts": {
+    "script_name": "json-server db.json"
+  },
+
+npm run <script_name>                       // run scrip from package.json using npm cli
+
+--
+
+npx create-react-app <app_name>             // create new react.js application project
