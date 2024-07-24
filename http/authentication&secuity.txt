@@ -1,0 +1,6 @@
+level 1           login and password
+level 2           encryption
+level 3           hashing
+level 4           hashing and salting
+level 5           cookies and sessions
+level 6           QAuth 2.0 (Open Auth)

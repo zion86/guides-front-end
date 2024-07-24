@@ -1,0 +1,118 @@
+// setting GIT user name & email
+git config --global user.name "User X"
+git config --global user.email "email@gmail.com"
+git config --list
+
+// create new project folder
+mkdir <project_name>
+cd <project_name>
+
+// git initialization
+git init
+
+git status                                          "start tracking files"
+
+git add <file_name>                                 "add one file to tracking"
+git add . || git add -A                             "add all files to tracking"
+
+git commit -m "commit_name"                         "create commit"
+git commit --amend -m 'add name'                    "changing wrong commit name"
+
+git diff                                            "show changes in file"
+git diff <file_name>                                "show changes in file"
+
+git checkout <file_name>                            "discard changes in untracked, uncommited file"
+
+git reset HEAD <file_name>                          "uncheck tracked file"
+git tag <tag_name>                                  "add tag name to commit"
+
+git push                                            "send files from local folder to github repo"
+git push --tags                                     "send files from local folder to github repo with commits tags"
+
+git log                                             "show history of commits"
+git log -1                                          "show last commit"
+git log --oneline                                   "show short list of commits names until current commit"
+git log --oneline --all                             "show short list of all commits"
+git log --oneline --all --graph                     "show short list of all commits with graph"
+git cat-file -p <hash_name>                         "show commit information"
+git show <hash_name>                                "show commit content"
+
+git rm <file_name>                                  "delete file from commit and folder"
+git rm --cached -r                                  "remove all files from git status 'tracking'"
+git commit --amend --no-edit                        ""
+
+git rm --cached <file_name>                         "delete file from commit but NOT from folder"
+git commit --amend --no-edit
+
+// RETURN PREVIOUS CONDITION OF COMMIT
+git checkout <hash_name>                            "return to another prev commit"
+git checkout <hash_name> <file_name>
+git diff --staged                                   "show the difference in the contents of the file"
+git commit -m 'commit name'                         "save prev commit"
+
+git revert <commit_tag_name>                        "return prev file state"
+
+
+// CREATE NEW BRANCH IN COMMIT
+git checkout -b <branch_name> <hash_name>           "create new branch in commit and check new branch"
+git checkout main                                   "change branch to main"
+
+git merge <branch_name>                             "merge main with created branch"
+git merge <branch_name> -m "commit name"            "merge main with created branch"
+git branch -d <branch_name>                         "delete branch after merge"
+
+
+// CREATE NEW BRANCH IN BRANCH
+git checkout -b <branch_name>                       "create new branch in current branch and switch to new branch"
+git checkout -b <branch_name> <origin/branch_name>  "create new branch in current branch and switch to new branch"
+
+git branch                                          "list with branch names"
+git branch <branch_name>                            "create new branch in local folder"
+git branch -m <branch_name>                         "rename current branch name"
+git branch --set-upstream-to=origin/<branch_name>   "bind local branch with remote branch"
+git branch -vv                                      "detail branch information"
+git checkout <branch_name>                          "change main branch to the <branch_name>"
+
+
+git pull                                            "pull from github origin main to local folder"
+git pull <origin_name> main                         "get files from remote repo main to local repo main"
+git fetch origin                                    "gel all branches from remote repo"
+
+
+git checkout -- <file_name>                         "discard changes in edited files"
+
+
+// ADD GIT REPO FROM INTERNET
+// 'origin' is a repository link on github https://github.com/user/repository.git
+git remote add <origin_name> <repo_path>            "add remote git repo from internet"
+git remote show origin                              "information for remote repo from internet"
+git remote -v                                       "information for remote repo from internet"
+
+git push origin main                                "sent local files to remote repo to main branch"
+git push -u origin main                             "sent files to remote repo to main branch"
+git push origin <branch_name>                       "sent local branch to remote repo"
+git push origin <old_name>:<new_name>               "sent branch to remote repo with changed branch name"
+git push origin :<old_name>                         "delete old branch from remote repo"
+
+git clone <path_repo>                               "clone repo from github to the local folder"
+
+git help <command_name>                             "show help info for <command>"
+
+
+// CREATE SSH KEY FOR GITHUB WEBSITE
+mkdir ~/.ssh
+cd ~/.ssh
+ssh-keygen -t rsa -b 4096 -C "email@gmail.com"
+enter key name: "key name"
+github => setting => SSH and GPG key => New SSH key => Titte; enter Public KEY
+ssh -T -i ~/.ssh/path_to_public_privet_key
+notepad++ ~/.ssh/config
+Host github.com
+  IdentityFile ~/.ssh/path_to_public_privet_key
+ssh -T git@github.com
+
+
+-----------------------------------------------
+<commit name>
+CTRL + C CTRL + C
+:wq!

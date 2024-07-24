@@ -1,0 +1,79 @@
+// DNS Server convert domain name to the IP Address
+//            ==> 1 request  ==>
+// Client                        Server
+// Front-end                     Back-end
+// (Browser)                     (Host)
+//            <== 2 response <==
+
+// https://www.website.com
+// http: HyperText Transfer Protocol    http:// https://
+// TLD: Top Level Domain                .com
+// SLD: Second Level Domain             .website
+// Subdomain                            www
+// domain name                          website.com
+
+--
+// API parameters ?key=query ?key1=query1&key2=query2
+https://www.website.com/websiteapi/path?key=query
+https://www.website.com/websiteapi/path?key1=query1&key2=query2
+  space in URL === %20 in ASCII Encoding
+
+// authentification
+
+--
+REST        REpresentational State Transfer
+            (підхід до архітектури мережевих протоколів, які надають доступ до інформаційних ресурсів)
+API         Application Programming Interface
+WWW         World Wide Web
+HTTP        Hypertext Transfer Protocol (протокол передачі гіпертекстових документів)
+FTP         File Transfer Protocol
+URL         Uniform Resource Locator
+IP          Internet Protocol (Address)
+JSON        JavaScript Object Notation (формат передачі даних)
+AJAX        Asynchronous JavaScript And XML
+FETCH API   відправка запитів на сервер
+
+--
+HTTP request methods:     DATABASE (CRUD):
+// get 'all' items from database
+GET     200/401/404       READ (ModelName.find({}, (err, results) => {}))
+// get 'one' specific item from database
+GET     200/401/404       READ (ModelName.findOne({ fieldName: endPoint }, (err, results) => {}))
+
+POST    200-201-202-204   CREATE (new ModelName({ fieldName: value }); modelName.save();)
+
+// updating entire database object (delete not updated fields in Object)
+PUT     200-204-201       UPDATE (ModelName.update({ conditions }, { updates }, (err, results) => {}))
+// updating only neaded peace database object
+PATCH   200-204           UPDATE (ModelName.update({ conditions }, { $set: updates }, (err, results) => {}))
+
+// delete 'all' items from database
+DELETE  404-410/200-204   DELETE (ModelName.deleteMany({}, (err) => {}))
+// delete 'one' item from database
+DELETE  404-410/200-204   DELETE (ModelName.deleteOne({ conditions }, (err) => {}))
+
+--
+// API endpoints .../goods              https://www.website.com/websiteapi/goods
+// API directories paths                https://www.website.com/websiteapi/path
+
+RESTful Routing:
+HTTP Verbs        /articles                   /articles/frontend
+GET               fetches 'all' articles      fetches 'one' specific article
+POST              creates 'one' new article   
+PUT               ---                         updates 'one' specific article
+PATCH             ---                         updates 'one' specific article
+DELETE            deletes 'all' articles      delete 'one' specific article
+
+--
+Client  =>  Server  =>  Database
+
+--
+HEAD
+OPTIONS
+
+HTTP response status codes:
+1- Informational responses (100–199)
+2- Successful responses (200–299)
+3- Redirection messages (300–399)
+4- Client error responses (400–499)
+5- Server error responses (500–599)

@@ -1,0 +1,7 @@
+Figma Measure       get all colors and fonts
+Font Fascia         get all fonts
+
+Figma Measure       get dimensions
+Style Organizer
+
+Inspect Styles
