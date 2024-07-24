@@ -1,0 +1,88 @@
+// ----------
+// FORM INPUT
+// ----------
+event - подія
+target - tag (html елемент)
+value - значення активного <input />
+
+state = {
+	value: ''
+};
+
+handleOnChange = event => { // {target: {value}}
+	this.setState({
+		value: event.target.value
+	});
+};
+
+handleOnSubmit = event => {
+  event.preventDefault();
+  this.setState({
+    value: ''
+  });
+};
+
+render() {	
+	const {value} = this.state;
+
+  return (
+    <div>
+      <form onSubmit={this.handleOnSubmit}>
+        <input value={value} onChange={this.handleOnChange} />
+      </form>
+    </div>
+  );
+}
+// ---------------------------
+// CONDITIONAL RENDER CHECKBOX
+// ---------------------------
+event.target => виведе активний елемент
+event.value => виведе активне значення
+
+handleInputChange = e => {
+  const target = e.target;
+  const value = target.type === "checkbox" ? target.checked : target.value;
+  const name = target.name;
+
+  this.setState({
+    [name]: value
+  });
+};
+
+// ------------------------
+// CHECKBOX CHECK - UNCHECK
+// ------------------------
+export class App extends Component {
+  state = {
+    checked: true
+  };
+
+  handleCheckBox = () => {
+    this.setState(({checked}) => ({
+      checked: !checked
+    }))
+  }
+
+  render() {
+    const {checked} = this.state;
+
+    return (
+      <>
+        <input type="checkbox" defaultChecked={checked} onClick={this.handleCheckBox} />
+        {checked === true ? <p>Checked</p> : <p>Unchecked</p>}
+      </>
+    )
+  }
+}
+
+
+  updateItem = () => {
+    const {editId, items, text} = this.state;
+    let updateList = items.map(el => el.id === editId ? {...el, content: text} : el);
+    this.setState({
+      items: updateList,
+      edit: false,
+      text: '',
+      editId: -1,
+    });
+  };

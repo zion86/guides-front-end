@@ -1,0 +1,54 @@
+// ---------------------------
+// Live filter list with query
+// ---------------------------
+
+class App extends React.Component {
+  state = {
+    query: '',
+    list: [
+      { id: 'a', name: 'Ford' },
+      { id: 'b', name: 'Audi' },
+      { id: 'c', name: 'Mercedes' },
+      { id: 'd', name: 'Ferrari' },
+      { id: 'e', name: 'Volkswagen' },
+    ],
+  };
+
+  onChange = ({ target: { value } }) => {
+    this.setState(() => ({ 
+      query: value
+    }));
+  };
+
+  onCancel = () => {
+    this.setState(() => ({
+      query: ''
+    }));
+  };
+
+  filterList = query => ({ name }) => name.toLowerCase().includes(query.toLowerCase());
+
+  render() {
+    const { query, list } = this.state;
+    const result = list.filter(this.filterList(query));
+    
+    return (
+      <React.Fragment>
+        {
+          query.length === 0
+            ? <input onChange={ this.onChange } value={ query } placeholder={ 'Search...' } />
+            : <React.Fragment>
+                <input onChange={ this.onChange } value={ query } autoFocus={ true } />
+                <button onClick={ this.onCancel }>Cancel</button>
+              </React.Fragment>
+        }
+
+        {
+          result.length === 0 
+            ? <p>Results not found</p>
+            : result.map(({ id, name }) => <p key={ id }>{ name }</p>)
+        }
+      </React.Fragment>
+    );
+  };
+};

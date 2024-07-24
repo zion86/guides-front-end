@@ -1,0 +1,30 @@
+// Install React.js globally
+npm install -g create-react-app
+
+// Run create-react-app
+create-react-app <app_name>
+
+// Install React.js locally
+npx create-react-app <app_name>
+  or
+npm init react-app <app_name>
+  or
+yarn create react-app <app_name>
+
+// Run insalled app
+npm start || yarn start
+
+
+// SASS
+npm i node-sass --save
+// incapsulation css styles
+import style from './App.module.css';
+className={style.app}
+
+
+// styled-components
+npm install --save styled-components
+import styled from 'styled-components';
+const AppBlock = styled.div`
+	color: 'red';
+`

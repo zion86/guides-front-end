@@ -1,0 +1,31 @@
+|--- App.js
+|--- App.scss
+|--- App-style.js
+
+// install SASS for react.js
+npm i node-sass -S
+
+// App.js
+import './App.scss';
+
+
+
+// install styled-components for react.js
+npm install --save styled-components
+
+// create style.js
+import styled from 'styled-components';
+
+export const Li = styled.li`
+  border-radius: 3px;
+  padding: 10px;
+`;
+
+Li.displayName = 'LiWrapper';
+
+// App.js
+import { Li } from './style.js';
+
+<Li>
+  <p>text</p>
+</Li>
