@@ -1,0 +1,33 @@
+// import 'module' to js file
+const mongoose = require('mongoose');
+
+// connect mongo database
+mongoose.connect('mongodb://localhost:27017/dbNane', { useNewUrlParser: true });
+
+// create Mongoose Schema
+const itemSchema = {
+  fieldName: DataType,
+};
+
+// create Mongoose Model
+const Item = mongoose.model('Item', itemSchema);
+
+// create Mongoose Document
+const item1 = new Item({
+  fieldName: value,
+});
+// item1.save();
+
+// insert (create) Mongoose Document into the database
+Item.insertMany([ item1, item2, item3 ], (err) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log('Ok');
+  }
+});
+
+// show database collections
+Item.find({}, (err, foundCollection) => {
+  console.log(itemsCollection);
+});

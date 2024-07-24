@@ -1,0 +1,55 @@
+<folder_name> + TAB button              // autofill name
+clear                                   // clear cli display
+
+
+touch <file_name.ext>                   // create new file
+echo 'some text...' >> <file_name>      // add text in file
+cat <file_name>                         // show file content
+start <file_name.ext>                   // open created file
+start -a <application_name> <file_name> // open specific file in specific application
+
+
+// create and delete folders and files
+mkdir <folder_name>                     // create new folder
+rmdir <folder_name>                     // delete only empty folder
+rm *                                    // delete current folder with all files inside
+rm -r <folder_name>/                    // delete folder with files
+rm <file_name>                          // remove file from current folder
+
+
+mv <old_name> <new_name>                // rename file
+mv <file_name> <folder_name>            // move file to folder
+
+
+// copy files
+cp <file_name> <path_folder>
+
+
+// ls === list - all files in current folder
+pwd                                     // print work directory
+ls                                      // show all files in current folder
+ls -a                                   // show all files in current folder + hidden files
+ls ~/Desktop                            // show files from another folder
+ls -1                                   // show by column
+ls -1 -a                                // show by column + hidden files
+
+
+// cd === change directory
+cd ~                                    // got to the root folder
+cd <folder_name>                        // go inside to the folder
+cd <folder_name1>/<folder_name2>        // go inside to the folders
+cd ..                                   // go back one level folder <=
+cd -                                    // go to prev directory
+cd /                                    // go to the root of current disk drive
+
+
+key UP                                  // previous command
+key DOWN                                // next command
+CTRL + U                                // clear all current line
+
+
+start .                                 // open current folder
+open <file_name>                        // open file by default application
+<program_name> <file_name>              // run program and open file
+
+<command_name> --help                   // get command help

@@ -1,0 +1,227 @@
+/* WRAPPER */
+container
+wrap
+wrapper
+inner
+outer
+
+/* SECTION */
+header
+navigation
+navbar
+nav
+menu
+sidebar
+main
+main-content
+promo
+hero
+features
+advantages
+offer
+benefits
+footer
+
+/* MARGIN, PADDING */
+gap
+spacing
+
+/* BLOCK ELEMENT MODIFICATOR */
+block
+block__header
+block__content
+block__body
+block__footer
+
+/* COLUMN */
+col
+column
+
+/* LIST */
+list
+list__item
+
+/* SIZE */
+xxs
+xs, tiny
+sm, small
+md, medium
+lg, large, big, wide
+xl, extra-large
+xxl
+
+/* COLOR */
+primary
+secondary
+tertiary
+extra
+default
+success
+danger
+warning
+error
+
+/* BUTTON */
+btn
+button
+loading
+close
+open
+touch
+edit
+more
+remove
+login
+logout
+select
+divider
+caret
+arrow
+up
+down
+delete
+reply
+next
+prev
+last
+first
+back
+ahead
+
+/* PERSON */
+profile
+person
+ava
+avatar
+name
+description
+address
+nickname
+birthday
+sex
+author
+
+/* TITLE */
+title
+short-title
+full-title
+
+/* LINK */
+lnk
+link
+
+/* TEXT */
+txt
+text
+paragraph
+info
+information
+
+/* IMAGE */
+img
+image
+i
+icon
+bg
+
+/* FORM */
+form
+form-group
+search
+form-search
+input
+help-block
+label
+
+/* CATEGORY */
+type
+category
+cat
+subcat
+subcategory
+section
+subsection
+
+/* VIDEO */
+video
+play
+stop
+pause
+
+/* SOCIAL */
+social
+vk
+fb
+twit
+inst
+
+/* ACTIVE */
+none
+disabled
+active
+current
+selected
+visible
+focus
+
+placeholder
+
+/* TIME */
+time
+date
+day
+month
+year
+
+/* CLEAR */
+clr
+clear
+clearfix
+
+/* DIVIDER */
+separator
+divide
+br
+line
+
+/* REST NAMES */
+logo
+new
+news
+sale
+features
+feedback
+support
+group
+module
+posters
+tabs
+tags
+slider
+table
+full
+breadcrumbs
+pagination
+pager
+dropdown
+comment
+subscription
+special
+standard
+screens
+rate
+online
+panel
+popup
+version
+page
+banners
+map
+price
+
+/* DIGIT */
+one
+thwo
+three
+four
+five

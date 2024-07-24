@@ -1,0 +1,33 @@
+1 inch: 2.54cm
+
+PPI: Pixel Per Inch
+DPR: Device Pixel Ratio
+DPI: Dots Per Inch
+CSS Viewport
+
+
+PPI             DPR
+<200            1
+200 - 300       1.5
+>300            PPI : 150 (2, 2.5, 3, 3.5, 4, ...)
+
+
+Display: 5.50 inches
+Display Physical Resolution:
+- width: 1080px
+- height: 1920px
+
+1080 * 1080 = 1166400
+1920 * 1920 = 3686400
+1166400 + 3686400 = 4852800
+
+diagonal resolution in pixels:
+  _______
+\/4852800 = 2202.907
+
+PPI: 2202.907 : 5.50 = 400.528 (401)
+
+DPR: PPI : 150
+     401 : 150 = 2.670 (2.7)
+
+CSS Viewport: 1080 : 2.7 = 400px

@@ -1,0 +1,25 @@
+CSS font size:
+
+value       naming
+1   xx-small    xxs
+2   x-small     xs
+3   small       sm
+4   medium      md
+5   large       l
+6   x-large     xl
+7   xx-large    xxl
+8   xxx-large   xxxl
+
+font weight:
+value       common weight name
+
+100         Thin (Hairline)
+200         Extra Light (Ultra Light)
+300         Light
+400         Normal (Regular)
+500         Medium
+600         Semi Bold (Demi Bold)
+700         Bold
+800         Extra Bold (Ultra Bold)
+900         Black (Heavy)
+950         Extra Black (Ultra Black)

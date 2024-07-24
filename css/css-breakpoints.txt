@@ -1,0 +1,8 @@
+mobile-first layout: bootstrap
+                      sm        md        lg        xl
+breakpoint   0        ≥576px    ≥768px    ≥992px    ≥1200px
+container    100%     540px     720px     960px     1140px
+
+mobile-first layout:
+                      sm        md        lg        xl
+breakpoint   0        ≥640px    ≥768px    ≥1024px   ≥1280px

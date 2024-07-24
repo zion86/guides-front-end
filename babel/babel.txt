@@ -1,0 +1,67 @@
+// Create folder
+// -------------
+mkdir <folder_name>
+
+// Create package.json file
+// ------------------------
+npm init -y
+
+// install babel
+// -------------
+npm install --save-dev @babel/core @babel/cli @babel/preset-env
+???????? npm install --save @babel/polyfill
+
+// Create folders and files
+// ------------------------
+mkdir dist
+mkdir src
+touch src/script.js
+touch .babelrc
+
+// add to .babelrc
+// ---------------
+{
+  "presets": 
+    ["@babel/preset-env"] 
+}
+
+// create file index.html
+// ----------------------
+touch index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script></script>
+</body>
+</html>
+
+// Change package.json
+// -------------------
+"browserslist": "> 0.25%, not dead",
+"scripts": {
+  "build": "babel src -d dist",
+  "watch": "babel src -d dist -w"
+},
+
+// compile ESx to ES5
+// ------------------
+npm run build || npm run watch
+
+// APP structure
+// -------------
+
+|-/node_modules
+|-/dist
+|---output_file
+|---index.html
+|-/src
+|---script.js
+|-package.json
+|-package-lock.json
+|-.babelrc
+

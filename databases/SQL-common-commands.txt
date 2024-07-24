@@ -1,0 +1,36 @@
+CRUD concept
+Create, Read, Update, Destroy
+
+
+// create db schema
+CREATE TABLE table_name (column_name datatype, PRIMARY KEY (column_name), ...);
+
+
+// create db data
+// v1
+INSERT INTO table_name VALUES (value_1, value_2, ...);
+// v2
+INSERT INTO table_name (column_name_1, column_name_2, ...) VALUES (value_1, value_2, ...);
+
+
+// read db
+SELECT * FROM table_name;
+SELECT column_name_1, column_name_2 FROM table_name;
+SELECT column_name FROM table_name WHERE column_name=value;
+
+
+// update db
+       table                                   condition
+UPDATE table_name SET column_name = value WHERE column_name = value;
+// ALTER TABLE statement is used to add, delete, or modify columns in an existing table
+ALTER TABLE table_name ADD column_name datatype;
+
+
+// delete row from db
+DELETE FROM table_name WHERE column_name = value;
+
+
+// JOIN clause is used to combine rows from two or more tables, based on a related column between them
+SELECT table_name_1.column_name, table_name_2.column_name, table_name_3.column_name
+FROM table_name
+INNER JOIN table_name_2 ON table_name_1.column_name=table_name_2.column_name;

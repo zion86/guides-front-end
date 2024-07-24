@@ -1,0 +1,51 @@
+// GRID CONTAINER
+- initialization
+display: grid;
+
+/* by default grid has row direction */
+grid-auto-flow: row;          grid-auto-flow: column;
+1                             1   3
+2                             2   4
+3
+4
+
+/* CSS properties specifies the size of an implicity-created grid row or column */
+grid-auto-rows: 100px;
+grid-auto-columns: 200px;
+
+- create grid rows and columns                                 rows / columns
+grid-template-rows: repeat(3, 1fr);             grid-template: auto / repeat(3, 1fr);
+grid-template-columns: repeat(3, 1fr);
+
+- grid gap                                         row  column
+row-gap: 10px;                                gap: 10px 30px;
+column-gap: 30px;
+
+- using template grid area
+  grid parent                                 grid children
+grid-template-areas:                          .css-class-name {
+  "<grid-area-name> <grid-area-name>"           grid-area: <grid-area-name>;
+  "<grid-area-name> ."                        }
+
+----------------------------------------------------------------------------------------
+
+// grid children
+- grid children position
+grid-row-start: 1;      grid-row: 1 / 3;      grid-area: row-start / column-start / row-end / column-end
+grid-row-end: 3;                              grid-area: 1 / 1 / 3 / 4;
+grid-column-start: 1;   grid-column: 1 / 4;
+grid-column-end: 4;
+
+----------------------------------------------------------------------------------------
+
+// GRID FUNCTIONS
+auto-fill                     // shrinks all elements by default to min-width
+auto-fit                      // grows all elements by default
+
+minmax(minVal, maxVal);
+
+repeat(n, size);              // repeat elements n times
+
+repeat(auto-fill, 100px);
+repeat(auto-fill, minmax(100px, 1fr));
+repeat(auto-fit, minmax(100px, 1fr));

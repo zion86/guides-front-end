@@ -1,0 +1,13 @@
+// descriptive naming
+$gray-light: #f3f3f3;
+$gray-dark: #999999;
+$red-basic: red;
+
+// functional naming
+$text-base: $gray-dark;
+$link-basic: $red-basic;
+$link-border-basic: $gray-light;
+
+
+hsla(0, 100%, 50%, 1)
+hsl(0, 100%, 50%)

@@ -1,0 +1,8 @@
+html {
+  min-width: 1330px;
+  background: url(./img/mockup-image.jpg) 50% 0 no-repeat;
+}
+
+body {
+  opacity: 0.5;
+}

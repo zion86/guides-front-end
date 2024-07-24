@@ -1,0 +1,70 @@
+mongod                                      // run mongodb server
+mongo                                       // run mongo shell
+
+
+// mongo shell commands
+help                                        // list with commands
+
+show dbs                                    // show database names
+db                                          // show current database
+
+use <db_name>                               // create new database
+
+// create or add collection with object to the database
+db.collection_name.insertOne(               // <= collection start
+  {                                         // <= document start
+    db_key_1: value                         // <= field: value
+  }                                         // <= document end
+)                                           // <= collection end
+
+show collections                            // show all collections in current database
+
+db.collection_name.find(query, projection)
+db.collection_name.find()                   // find all documents inside collection_name
+db.collection_name.find(                    // find a specific document field by specific value
+  {
+    field_name: value
+  }
+)
+db.collection_name.find(                    // find a specific document field by specific value with condition
+  {
+    field_name: { $gt: 1 }                  // find a specific document field by specific value using condition
+  }
+)
+db.collection_name.find(                    // return result only with needed field
+  {
+    field_name: value
+  },
+  {
+    field_name: value
+  }
+)
+
+db.collection_name.updateOne(               // update (create) new field in exist document
+  {
+    field_name: value                       // specify required field document
+  },
+  {
+    $set: {                                 // set new field
+      field_name: value
+    }
+  }
+)
+
+db.collection_name.insert(                  // insert to the exist collection new document
+  {
+    field_name: value,
+    array_field: [
+      { field_name_1: value },
+      { field_name_2: value }
+    ]
+  }
+)
+
+db.collection_name.deleteOne(               // delete document from collection
+  {
+    field_name: value
+  }
+)
+
+db.dropDatabase()                           // delete current database

@@ -1,0 +1,20 @@
+background shorthand properties:
+
+            color     picture       hor-pos  gap  vert gap    hor-sz  ver-sz   repeating  fix pic  pos-orig     show back-pic
+background: #454545   url(pig.jpg)  bottom   10px left 10px / 100%    100%     no-repeat  scroll   padding-box  content-box
+background: #454545   url(pig.jpg)  top center / cover no-repeat;
+
+backgroun-color: #454545;
+background-image: url("images/mockup.jpg");
+background-position: ;
+background-size: ;
+background-repeat: ;
+background-origin: ;
+background-clip: ;
+background-attachment: ;
+
+
+multiple backgrounds:
+
+background: #454545 url(front-image.jpg) bottom center / cover no-repeat,   /* front  (top) */
+            #ffffff url(back-image.jpg) bottom center / cover no-repeat;    /* back   (bottom) */

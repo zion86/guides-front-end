@@ -1,0 +1,11 @@
+width priority from high to low
+
+#           1                          2                        3
+
+                                ignored                   ignored
+1     width: 600px        =>    max-width: 800px    =>    min-width: 400px
+
+                                ignored                   ignored
+2     max-width: 800px    =>    width: 900px        =>    min-width: 400px
+
+3     max-width: 800px    =>    min-width: 400px

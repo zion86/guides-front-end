@@ -1,0 +1,8 @@
+vim <file_name>               open vim editor
+
+// press INSERT button to type the text
+
+// press ESC button to stop typing
+
+// close the vim editor
+:wq!

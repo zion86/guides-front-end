@@ -1,0 +1,7 @@
+sudo mkdir -p /data/db
+sudo chown $USER /data/db
+sudo killall mongod             --kill all mongodb process
+sudo service mongod start       --start mongod server
+sudo mongod
+mongo
+sudo service mongod stop

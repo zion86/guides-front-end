@@ -1,0 +1,3 @@
+1000px;                 // full width
+1000px : 100 = 10px;    // get 1% from full width
+45px : 10px = 4.5%;     // get need width in percent

@@ -1,0 +1,11 @@
+SQL (Structured query language)
+система керування реляційними базами даних
+--
+mySQL
+PostgreSQL
+
+
+noSQL (not only Structured query language)
+документо-орієнтована система керування базами даних з відкритим вихідним кодом, яка не потребує опису
+--
+MongoDB
