@@ -1,0 +1,36 @@
+// open
+ctrl+ k + o           open project folder
+ctrl + b              open - close <explorer> left window panel
+ctrl + `              open - close integrated terminal
+ctrl + ,              open settings window
+
+// close
+ctrl + w              close current tab in VS code
+ctrl + k + w          close all tabs in VS code
+
+// change opened file
+ctrl + tab            change next file
+ctrl + shift + tab    change previous file
+
+// search file
+ctrl + p              go to File...
+ctrl + e              search files by file name in VS editor
+
+// find, replace words in current file
+ctrl + f              find <word> in current file
+alt  + enter          replace all words in current file
+ctrl + h              find and replace <words>
+enter                 replace only first word
+ctrl + alt + enter    replase all words in current file
+
+// find, replace words in project folder
+ctrl + shift + f      find <word> in all files
+ctrl + shift + h      replace to the new word
+ctrl + alt + enter    replace words in all
+
+// line
+alt + ↓ / ↑           move current line down / up
+alt + shift + ↓ / ↑   copy current line down / up
+ctrl + ] / [          indent / outdent current line
+
+ctrl + q              change VS panel

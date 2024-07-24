@@ -1,0 +1,157 @@
+npm install --save redux react-redux
+npm i -S redux react-redux
+
+
+// ------------------------------------
+// CREATE ACTION-TYPES src/constants.js
+// ------------------------------------
+export const INCREMENT = 'INCREMENT';
+export const DECREMENT = 'DECREMENT';
+export const RESET = 'RESET';
+
+
+// -------------------------------------
+// CREATE ACTION-CREATORS src/actions.js
+// -------------------------------------
+import { INCREMENT, DECREMENT, RESET } from './constants.js';
+
+export const inc = counter => ({
+  type: INCREMENT,
+  counter
+});
+
+export const dec = counter => ({
+  type: DECREMENT,
+  counter
+});
+
+export const res = counter => ({
+  type: RESET,
+  counter
+});
+
+
+// -------------------------------
+// CREATE REDUCERS src/reducers.js
+// -------------------------------
+import { INCREMENT, DECREMENT, RESET } from './constants.js';
+
+let initState = {
+  counter: 0
+}
+
+export const rootReducer = (state = initState, action) => {
+  switch (action.type) {
+
+    case INCREMENT:
+      console.log(action);
+      return {...state, counter:  action.counter + 1 };
+
+    case DECREMENT:
+      console.log(action);
+      return {...state, counter:  action.counter - 1 };
+
+    case RESET:
+      console.log(action);
+      return {...state, counter:  action.counter = 0 };
+
+    default:
+      return state;
+  }
+}
+
+
+// -------------------------
+// CREATE STORE src/store.js
+// -------------------------
+import { createStore } from 'redux';
+import { rootReducer } from './reducers';
+
+const devTool = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
+export const store = createStore(rootReducer, devTool);
+
+
+// -----------------------------------------------
+// CREATE PROVIDER AND CONNECT STORE /src/index.js
+// -----------------------------------------------
+import React from 'react';
+import { render } from 'react-dom';
+import { App } from './components/App';
+import { Provider } from 'react-redux';
+import { store } from './store';
+
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>, 
+  document.getElementById('root')
+);
+
+
+// --------------------------------------------------------
+// CREATE CONTAINER FOR COMPONENT src/containers/Counter.js
+// --------------------------------------------------------
+
+// V1
+// --
+import React from 'react';
+import { connect } from 'react-redux';
+import { inc, dec, res } from './actions';
+
+const Counter = ({ counter, inc, dec, res }) => (
+  <>
+    <p>Counter: {counter}</p>
+    <button onClick={() => inc(counter)}>Add</button>
+    <button onClick={() => dec(counter)}>Min</button>
+    <button onClick={() => res(counter)}>Reset</button>
+  </>
+);
+
+export const Render = connect(
+  ({ counter }) => ({ counter }),
+  { inc, dec, res }
+)(Counter)
+
+// ----------------------------------------------------------
+
+// V2
+// --
+const Counter = (props) => {
+  const { counter, increment, decrement, reset } = props;
+
+  const handleReset = () => reset(counter);
+
+  return (
+    <>
+      <p>Counter: {counter}</p>
+      <button onClick={() => increment(counter)}>Add</button>
+      <button onClick={() => decrement(counter)}>Min</button>
+      <button onClick={handleReset}>Reset</button>
+    </>
+  )
+};
+
+const mapStateToProps = state => {
+  return {
+    counter: state.counter
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    increment: counter => {
+      dispatch(inc(counter))
+    },
+    decrement: counter => {
+      dispatch(dec(counter))
+    },
+    reset: counter => {
+      dispatch(res(counter))
+    }
+  }
+}
+
+export const Render = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Counter)

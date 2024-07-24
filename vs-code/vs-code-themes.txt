@@ -1,0 +1,9 @@
+// Themes
+Bearded Theme
+
+Gruvbox Theme
+Gruvbox Material
+One Dark Pro
+Theme - Oceanic Next
+Hopscotch Official Theme
+Dracula Official

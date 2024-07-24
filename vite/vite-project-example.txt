@@ -1,0 +1,65 @@
+/public
+    /fonts/
+      aria.ttf
+
+    favicon.ico
+    favicon.svg
+
+src/
+    /components/
+      /header/
+        header.html
+        _header.scss
+        header.jpg
+        logo.svg
+      /section/
+      /footer/
+
+    /img/
+      background.img
+    /scss/
+      _fonts.scss
+      _colors.scss
+      _reset.scss
+    
+    index.html
+    index.js
+    index.scss
+----
+.gitignore
+----
+package.json
+  {
+    "name": "vite-project-name",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+      "dev": "vite --host --open",
+      "build": "vite build",
+      "preview": "vite preview --host --open"
+    },
+    "devDependencies": {
+      "sass": "^1.76.0",
+      "vite": "^5.2.0",
+      "vite-plugin-html-inject": "^1.1.2"
+    }
+  }
+----
+vite.config.js
+  import { defineConfig } from 'vite';
+  import htmlInject from 'vite-plugin-html-inject';
+
+  export default defineConfig({
+    root: './src',
+    publicDir: '../public',
+    build: {
+      emptyOutDir: true,
+      outDir: '../dist',
+      assetsDir: 'assets',
+    },
+    plugins: [
+      htmlInject(),
+    ],
+  });
+----

@@ -1,0 +1,26 @@
+// enabled
+All Autocomplete
+Auto Close Tag
+Auto Rename Tag
+Brackets Pair Colorizer
+Code runner
+Color Highlight
+
+CSS Peek
+eCSStractor for VSCode
+Highlight Matching Tag
+JS Quick Console
+lit-html
+Live Server
+Simple icons
+
+
+// disabled
+ES7 React/Redux/GraphQL/React-Native snippets
+CSS Formatter
+HTML to CSS / LESS / SCSS
+Import Cost
+indent-rainbow
+Live Sass Compiler
+open in browser
+Prettier - Code formatter

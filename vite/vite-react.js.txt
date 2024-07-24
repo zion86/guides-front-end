@@ -1,0 +1,12 @@
+npm create vite@latest
+npm create vite@latest <app_name>
+
+npm install
+
+cd <app_name>
+npm install
+npm run dev
+
+
+create vite config file in root project folder
+vite.config.js

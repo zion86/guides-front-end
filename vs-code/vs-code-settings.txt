@@ -1,0 +1,58 @@
+{
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontSize": 18,
+  "editor.tabSize": 2,
+  "editor.rulers": [
+    95
+  ],
+  "editor.minimap.maxColumn": 0,
+  "editor.wordWrap": "off",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.renderWhitespace": "all",
+  "editor.renderControlCharacters": false,
+  "editor.hover.enabled": false,
+  // "editor.renameOnType": true,
+  "files.autoSave": "onFocusChange",
+  // "html.format.wrapAttributes": "auto",
+  "html.format.wrapAttributes": "preserve",
+  "html.format.wrapLineLength": 0,
+  "html.autoClosingTags": true,
+  // "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+  // "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\git-cmd.exe",
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  // "terminal.integrated.rendererType": "dom",
+  "terminal.integrated.fontFamily": "Hack",
+  // "terminal.integrated.fontFamily": "JetBrains Mono",
+  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.lineHeight": 1,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "window.autoDetectHighContrast": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "breadcrumbs.enabled": false,
+  "workbench.colorTheme": "BeardedTheme Arc Eggplant",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.iconTheme": "simple-icons",
+  "workbench.commandPalette.history": 30,
+  "files.associations": {
+    "*.svg": "html",
+    "*.jsx": "html"
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "javascript.autoClosingTags": true,
+  "javascript.suggest.autoImports": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  // "prettier.singleQuote": true,
+  "extensions.ignoreRecommendations": true,
+}
+
+
+// Disable GPU rendering in app
+// ----------------------------
+Правий клік на ярлику
+"C:\Program Files (x86)\Microsoft VS Code\Code.exe" --disable-gpu --disable-gpu-compositing
